@@ -16,13 +16,16 @@ Dependencies:
 * None currently defined.
 
 How to Use:
-1. Clone the role repository:Bashgit clone https://github.com/your_username/ansible_role_apache.git
+1. Clone the role repository: git clone https://github.com/your_username/ansible_role_apache.git
 
 2. Add the role to your Ansible playbook:-
-- hosts: all
-  become: true
-  roles:
-    - role: apache_playbook
+
+  ```javascript
+  - hosts: all
+    become: true
+    roles:
+      - role: apache_playbook
+  ```
 
 Replace all with the target host group if you're not deploying to all hosts.
 
@@ -31,7 +34,10 @@ Replace all with the target host group if you're not deploying to all hosts.
     * The index.html file will only be copied to these nodes.
 
 4. Run the playbook:
-* ansible-playbook -i inventory.ini <your-playbook>.yaml
+
+```javascript
+  ansible-playbook -i inventory.ini <your-playbook>.yaml
+  ```
 
 Testing:
 It's recommended to write unit tests for your role to ensure its functionality. You can use tools like Molecule or the ansible-test module.
